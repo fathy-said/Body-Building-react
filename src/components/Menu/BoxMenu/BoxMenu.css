@@ -1,0 +1,60 @@
+ .menu-box .box {
+   background-color: var(--color-gry-2);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-width: 180px;
+   height: 180px;
+   padding: 20px;
+   border-radius: 6px;
+   flex-direction: column;
+   gap: 30px;
+   position: relative;
+   transition: var(--transition);
+   cursor: pointer;
+ }
+
+ .menu-box .box::before {
+   content: "";
+   position: absolute;
+   width: 0%;
+   height: 4px;
+   background-color: var(--color-main-1);
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: var(--transition);
+ }
+
+
+
+ .menu-box .box.active::before,
+ .menu-box .box:hover::before {
+   width: 100%;
+
+ }
+
+ .menu-box .box.active span,
+ .menu-box .box:hover span {
+   color: var(--color-main-2);
+
+ }
+
+ .menu-box .box.active,
+ .menu-box .box:hover {
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+ }
+
+ .menu-box .box img {
+   width: 40px;
+ }
+
+ .menu-box .box span {
+   display: block;
+   color: var(--color-gry);
+   font-size: var(--fnt-22);
+   font-weight: 600;
+   text-transform: capitalize;
+   transition: var(--transition);
+
+ }

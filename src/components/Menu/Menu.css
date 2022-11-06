@@ -1,0 +1,74 @@
+ .menu {
+   padding-top: var(--padding-top);
+   padding-bottom: var(--padding-top);
+ }
+
+ .menu .box-title {
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+
+ }
+
+ .menu .box-title h1 {
+
+   text-transform: capitalize;
+   color: var(--color-main-2);
+   font-weight: 500;
+   font-size: var(--fnt-38);
+ }
+
+ .menu form {
+   width: 100%;
+   max-width: 700px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 30px auto;
+ }
+
+ .menu form input {
+   border: none;
+   outline: none !important;
+   background-color: transparent;
+   font-size: var(--fnt-19);
+   font-weight: 500;
+ }
+
+ .menu form input:first-child {
+   flex: 1;
+   border: 2px solid var(--color-gry);
+   padding: 10px;
+   border-start-start-radius: 6px;
+   border-end-start-radius: 6px;
+   color: var(--color-main-2);
+ }
+
+ .menu form input:last-child {
+   border: 2px solid var(--color-gry);
+   padding: 10px 20px;
+   border-start-end-radius: 6px;
+   border-end-end-radius: 6px;
+   color: var(--color-main-2);
+   transition: var(--transition);
+   border-left: transparent;
+
+ }
+
+ .menu form input:last-child:hover {
+   border: 2px solid var(--color-main-1);
+   background-color: var(--color-main-1);
+   border-left: transparent;
+ }
+
+ .menu .menu-box {
+   margin: 50px 0;
+
+ }
+
+ .menu .menu-box .splide {
+   width: 100%;
+   max-width: 100%;
+ }

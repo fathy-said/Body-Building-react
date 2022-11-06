@@ -1,0 +1,19 @@
+.container-exercises .all-exercises {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+  padding: 0 20px;
+}
+
+.container-exercises {
+  padding-bottom: var(--padding-bottom);
+}
+
+
+.container-exercises .title-box {
+  text-transform: capitalize;
+  color: var(--color-main-2);
+  font-weight: 500;
+  font-size: var(--fnt-35);
+  margin-bottom: 30px;
+}
