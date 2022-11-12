@@ -1,0 +1,24 @@
+.go-up {
+  position: fixed;
+  bottom: 40px;
+  width: 25px;
+  right: -25px;
+
+  height: 30px;
+  background-color: var(--color-main-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.go-up.active {
+  right: 20px;
+}
+
+.go-up svg {
+  font-size: var(--fnt-17);
+  color: var(--color-main-2);
+}

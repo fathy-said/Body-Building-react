@@ -1,6 +1,6 @@
 .exercise-detail {
   padding-top: calc(var(--padding-top) - 70px);
-  padding-bottom: var(--padding-bottom);
+  padding-bottom: calc(var(--padding-bottom) + 180px);
 }
 
 .exercise-detail .box-img {}
@@ -65,3 +65,10 @@
 }
 
 .exercise-detail .box-left .box-icon div h5 {}
+
+@media (max-width:767px) {
+  .exercise-detail {
+    padding-top: calc(var(--padding-top) - 70px);
+    padding-bottom: calc(var(--padding-bottom) + 80px);
+  }
+}

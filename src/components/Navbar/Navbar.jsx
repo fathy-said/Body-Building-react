@@ -5,7 +5,7 @@ import { CgGym } from "react-icons/cg";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => (
-    <div className="navbar">
+    <div className="navbar" id="navbar">
         <div className="box">
             <div className="logo">
                 <a href="#">
@@ -16,9 +16,7 @@ const Navbar = () => (
                 <li>
                     <NavLink to={"/"}>Home</NavLink>
                 </li>
-                <li>
-                    <NavLink to={"/exercises"}>exercises</NavLink>
-                </li>
+
             </ul>
         </div>{" "}
     </div>

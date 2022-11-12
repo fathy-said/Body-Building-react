@@ -1,6 +1,6 @@
  .menu {
    padding-top: var(--padding-top);
-   padding-bottom: var(--padding-top);
+   padding-bottom: calc(var(--padding-bottom) - 40px);
  }
 
  .menu .box-title {

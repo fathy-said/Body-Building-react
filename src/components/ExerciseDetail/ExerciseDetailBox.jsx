@@ -4,6 +4,7 @@ import { FaBiking } from "react-icons/fa";
 import { exerciseData } from "../../constants/data";
 import "./ExerciseDetailBox.css";
 import { useParams } from "react-router-dom";
+import { SimilarExercises } from "../index"
 
 const ExerciseDetailBox = () => {
     let param = useParams();
@@ -55,6 +56,10 @@ const ExerciseDetailBox = () => {
                     </div>
                 </div>
             </div>
+            <SimilarExercises nameExercise={getDetails ? getDetails[0].target : null} title={"target muscle"} />
+
+
+            <SimilarExercises title={"equipment"} />
         </>
     );
 };

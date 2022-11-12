@@ -1,0 +1,75 @@
+.footer {
+  padding: 100px 0 80px;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer .container h5 {
+
+  font-size: var(--fnt-19);
+  font-weight: 500;
+  color: var(--color-gry-3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.footer .container h5 span {}
+
+.footer .container h5 span:nth-child(1) {}
+
+.footer .container h5 span:nth-child(2) {
+  color: var(--color-main-1);
+  font-weight: 700;
+}
+
+.footer .container .box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+.footer .container .box-icon span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.footer .container .box-icon a {
+
+  font-size: var(--fnt-20);
+  font-weight: bold;
+  color: var(--color-gry-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: var(--transition);
+  background-color: transparent;
+}
+
+.footer .container .box-icon a:hover {
+
+  background-color: var(--color-main-1);
+  width: 50px;
+  height: 50px;
+}
+
+.footer .container .box-icon i {
+
+  font-weight: bold;
+}

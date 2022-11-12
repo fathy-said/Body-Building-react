@@ -1,0 +1,26 @@
+.similar {
+  padding-bottom: calc(var(--padding-bottom));
+
+
+}
+
+.similar .box-title {
+  margin-bottom: 60px;
+}
+
+.similar .box-title h2 {
+  color: var(--color-main-2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.similar .box-title span {
+  color: var(--color-main-1);
+}
+
+.similar .box {}

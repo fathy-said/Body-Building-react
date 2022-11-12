@@ -7,6 +7,8 @@ import { useState, useEffect } from "react";
 import { bodyPartList } from "../../constants/data.js";
 import { useContext } from "react";
 import { contextID } from "../../constants/Contextapi.js";
+import Fade from 'react-reveal/Fade';
+
 const Menu = () => {
     let { setSearchContext } = useContext(contextID)
     const [getSearch, setSearch] = useState();
@@ -49,36 +51,38 @@ const Menu = () => {
                         dataSearch()
                     }}
                 />
-            </form>
-            <div className="menu-box d-flex">
-                <Splide
-                    options={{
-                        perPage: 4,
-                        arrows: false,
-                        pagination: false,
-                        drag: "free",
-                        gap: "2rem",
-                        // type: "loop",
-                        breakpoints: {
-                            992: {
-                                perPage: 2,
+            </form> <Fade bottom>
+                <div className="menu-box d-flex">
+
+                    <Splide
+                        options={{
+                            perPage: 4,
+                            arrows: false,
+                            pagination: false,
+                            drag: "free",
+                            gap: "2rem",
+                            // type: "loop",
+                            breakpoints: {
+                                992: {
+                                    perPage: 2,
+                                },
                             },
-                        },
-                    }}
-                >
-                    {getMenu ? (
-                        getMenu.map((el, index) => {
-                            return (
-                                <SplideSlide key={index}>
-                                    <BoxMenu name={el} Id={el} />
-                                </SplideSlide>
-                            );
-                        })
-                    ) : (
-                        <h2>not found data</h2>
-                    )}
-                </Splide>
-            </div>
+                        }}
+                    >
+                        {getMenu ? (
+                            getMenu.map((el, index) => {
+                                return (
+                                    <SplideSlide key={index}>
+                                        <BoxMenu name={el} Id={el} />
+                                    </SplideSlide>
+                                );
+                            })
+                        ) : (
+                            <h2>not found data</h2>
+                        )}
+                    </Splide>
+
+                </div></Fade>
         </div>
     );
 };

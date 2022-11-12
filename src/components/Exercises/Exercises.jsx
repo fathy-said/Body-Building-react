@@ -5,6 +5,7 @@ import { ExerciseBox } from "..";
 import { exerciseData } from "../../constants/data";
 import { contextID } from "../../constants/Contextapi";
 import { Link } from "react-router-dom";
+import Fade from 'react-reveal/Fade';
 
 const Exercises = () => {
     let { dataContext, getSearchContext } = useContext(contextID);
@@ -44,20 +45,22 @@ const Exercises = () => {
         getSearchData();
     }, [getSearchContext]);
     return (
-        <div className="container-exercises">
+        <div className="container-exercises" id="exercises">
             <div className="title-box">showing results</div>
             <div className="all-exercises">
                 {getExercise ? (
                     getExercise.map((ex) => {
                         return (
-                            <Link to={"/exerciseDetail/" + ex.id} key={ex.id}>
-                                <ExerciseBox
-                                    Img={ex.gifUrl}
-                                    Name={ex.name}
-                                    bodyPart={ex.bodyPart}
-                                    target={ex.target}
-                                />
-                            </Link>
+                            <Fade bottom key={ex.id}>
+                                <Link to={"/exerciseDetail/" + ex.id} >
+                                    <ExerciseBox
+                                        Img={ex.gifUrl}
+                                        Name={ex.name}
+                                        bodyPart={ex.bodyPart}
+                                        target={ex.target}
+                                    />
+                                </Link>
+                            </Fade>
                         );
                     })
                 ) : (

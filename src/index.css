@@ -31,6 +31,10 @@
   --fnt-150: 150px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--back-color-black) !important;
   color: var(--white) !important;

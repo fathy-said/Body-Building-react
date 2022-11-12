@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import { CgGym } from "react-icons/cg";
 
 const HomeHeder = () => (
-    <div className="header-home row">
+    <div className="header-home row " >
         <div className="box-left col-lg-6">
             <div className="box">
                 <div className="logo col-2">
@@ -19,7 +19,7 @@ const HomeHeder = () => (
                         <NavLink to={"/"}>Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/exercises"}>exercises</NavLink>
+                        <a href="#exercises">exercises</a>
                     </li>
                 </ul>
             </div>
