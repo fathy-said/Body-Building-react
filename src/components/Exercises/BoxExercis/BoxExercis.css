@@ -8,8 +8,9 @@
    gap: 30px;
    position: relative;
    transition: var(--transition);
-   cursor: pointer;
    min-height: 400px;
+   overflow: hidden;
+   cursor: pointer;
  }
 
  .box-exercise::before {
@@ -26,12 +27,15 @@
 
  .box-exercise:hover::before {
    content: "";
-
    width: 100%;
-
  }
 
- .box-exercise img {}
+ .box-exercise img {
+   width: 100%;
+   filter: opacity(.3);
+
+
+ }
 
  .box-exercise .box-bt {
    display: flex;
@@ -55,11 +59,7 @@
 
  }
 
- .box-exercise .box-bt span:hover {
-   background-color: var(--color-main-1);
-   color: var(--back-color-black);
 
- }
 
  .box-exercise h5 {
    margin: 0 0 20px 30px;

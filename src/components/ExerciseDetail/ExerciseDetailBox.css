@@ -19,18 +19,12 @@
 .exercise-detail .box-left h2 {
   color: var(--color-main-2);
   font-weight: 700;
-  font-size: var(--fnt-32);
+  font-size: var(--fnt-30);
   text-transform: capitalize;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.exercise-detail .box-left p {
-  color: var(--color-gry-3);
-  font-weight: 500;
-  font-size: var(--fnt-16);
-  text-transform: capitalize;
-  margin-bottom: 50px;
-}
+
 
 .exercise-detail .box-left .box-icon {
   display: flex;
@@ -66,7 +60,7 @@
 .exercise-detail .box-left .box-icon div h5 {
   margin: 0;
   color: var(--color-main-2);
-  font-size: var(--fnt-22);
+  font-size: var(--fnt-20);
   text-transform: capitalize;
 }
 

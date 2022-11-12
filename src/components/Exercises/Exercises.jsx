@@ -2,30 +2,47 @@ import React from "react";
 import { useState, useEffect, useContext } from "react";
 import "./Exercises.css";
 import { ExerciseBox } from "..";
-import { options, SearchAxios } from "../../constants/data";
+import { exerciseData } from "../../constants/data";
 import { contextID } from "../../constants/Contextapi";
 import { Link } from "react-router-dom";
+
 const Exercises = () => {
-    let { dataContext } = useContext(contextID);
+    let { dataContext, getSearchContext } = useContext(contextID);
+
     const [getExercise, setExercise] = useState();
     let dataMenu = async () => {
         if (dataContext === "all") {
-            let res = await SearchAxios(
-                `https://exercisedb.p.rapidapi.com/exercises`,
-                options
-            );
-            setExercise(res);
+            let res = await exerciseData;
+
+            setExercise(await res);
         } else {
-            let res = await SearchAxios(
-                `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${dataContext}`,
-                options
+            let res = exerciseData.filter(
+                (Part) => Part.bodyPart === dataContext
             );
-            setExercise(res);
+            setExercise(await res);
         }
     };
+    let getSearchData = async () => {
+        if (getSearchContext !== undefined) {
+            let res = await exerciseData.filter(
+                (Part) => Part.equipment === getSearchContext
+            );
+            setExercise(await res);
+            if (res.length <= 0) {
+                setExercise(await exerciseData);
+            }
+
+        }
+
+    };
+
     useEffect(() => {
-        // dataMenu();
+        dataMenu();
     }, [dataContext]);
+
+    useEffect(() => {
+        getSearchData();
+    }, [getSearchContext]);
     return (
         <div className="container-exercises">
             <div className="title-box">showing results</div>
