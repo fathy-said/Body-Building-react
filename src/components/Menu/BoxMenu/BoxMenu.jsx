@@ -34,17 +34,20 @@ const BoxMenu = ({ name, Id }) => {
             setDataContext(e.target.id);
 
         }
+
     };
+    let checkTarget = (e) => {
+        if (Id === "all") {
+            e.target.parentElement.classList.add("active")
+        }
+
+    }
     return (
         <>
             <div
                 className="box"
                 id={Id}
-                onLoad={(e) => {
-                    e.target.parentElement.id === "all"
-                        ? e.target.parentElement.classList.add("active")
-                        : null;
-                }}
+                onLoad={(e) => { checkTarget(e) }}
                 onClick={(e) => {
                     setActive(e);
                 }}
